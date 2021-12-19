@@ -1,16 +1,25 @@
-import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-function Greeting(){
-  return <h1> this react functional component</h1>
+function Greeting() {
+  return (
+    <div>
+      <Name />
+      <Bio />
+    </div>
+  );
 }
 
+// implicit return
+const Name = () => <h1>varun</h1>;
 
-ReactDOM.render(
-  <Greeting></Greeting>,
-  document.getElementById('root')
-);
+// explicit return
+const Bio = () => {
+  return <h1>software engineer</h1>;
+};
+
+ReactDOM.render(<Greeting></Greeting>, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
